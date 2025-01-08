@@ -10,20 +10,13 @@ function process(data){
     console.log(meals);
     var oldContent = document.getElementById("display");
     oldContent.textContent = "";
+    var newDiv = document.createElement("div");
+    var counter = 0;
     for(var i=0;i<meals.length;i++){
-        var newDiv = document.createElement("div");
-        // newDiv.innerHTML = `
-        //    <img src = "${meals[i].strMealThumb}"> <br>
-        //    Meal ID: ${meals[i].idMeal} <br>
-        //     Meal Name: ${meals[i].strMeal} <br>
-        //     Meal Area: ${meals[i].strArea} <br>
-        //     Cooking Instruction: <br>
-        //     ${meals[i].strInstructions}
-        // `;
-
-        newDiv.innerHTML = `
-        <div class="row">
-                <div class="card col col-lg-4 col-md-6" style="width: 18rem;">
+        if(counter<5){
+            
+            newDiv.innerHTML = `
+                <div class="card" style="width: 18rem;">
                     <img src="${meals[i].strMealThumb}" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Meal Name: ${meals[i].strMeal}</h5>
@@ -33,10 +26,17 @@ function process(data){
                         <p class="card-text">${meals[i].strInstructions}</p>
                     </div>
                 </div>
-        
-        </div>
-        
-        `;
-        oldContent.appendChild(newDiv);
+
+            
+            `;
+            oldContent.appendChild(newDiv);
+
+            counter+=1;
+        }
+        else{
+            break;
+        }
+        document.getElementById("more").innerHTML=`<button type="button" class="btn btn-info" onclick="showAll()">Show All</button>`;
     }
 }
+
