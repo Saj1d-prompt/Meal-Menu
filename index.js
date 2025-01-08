@@ -13,7 +13,12 @@ function process(data){
     for(var i=0;i<meals.length;i++){
         var newDiv = document.createElement("div");
         newDiv.innerHTML = `
-           <img src = "${meals[i].strMealThumb}"> 
+           <img src = "${meals[i].strMealThumb}"> <br>
+           Meal ID: ${meals[i].idMeal} <br>
+            Meal Name: ${meals[i].strMeal} <br>
+            Meal Area: ${meals[i].strArea} <br>
+            Cooking Instruction: <br>
+            ${meals[i].strInstructions}
         `;
         oldContent.appendChild(newDiv);
     }
