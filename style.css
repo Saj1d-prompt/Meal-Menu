@@ -1,3 +1,4 @@
+
 header{
     text-align: center;
     background-color: rgb(198, 253, 223);
@@ -20,7 +21,3 @@ footer{
     padding: 50px;
 }
 
-/* #display{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-} */

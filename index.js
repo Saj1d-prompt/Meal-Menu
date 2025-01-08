@@ -31,13 +31,12 @@ function process(data){
                 </div>
             `;
             oldContent.appendChild(newDiv);
-
             counter+=1;
         }
         else{
             break;
         }
-        document.getElementById("more").innerHTML=`<button type="button" class="btn btn-info" onclick="showAll()">Show All</button>`;
+        document.getElementById("more").innerHTML=`<button type="button" class="btn btn-info" onclick="showAll()">SHOW ALL</button>`;
     }
 }
 
