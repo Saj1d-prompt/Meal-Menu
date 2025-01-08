@@ -19,3 +19,8 @@ footer{
     margin: 10px;
     padding: 50px;
 }
+
+/* #display{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+} */
