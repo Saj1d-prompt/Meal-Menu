@@ -1,0 +1,15 @@
+header{
+    text-align: center;
+    background-color: rgb(198, 253, 223);
+    padding: 10px;
+}
+
+footer{
+    background-color: rgb(45, 47, 46);
+    text-align: center;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
