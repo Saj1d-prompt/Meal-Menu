@@ -13,3 +13,9 @@ footer{
     bottom: 0;
     width: 100%;
 }
+
+.main{
+    align-items: center;
+    margin: 10px;
+    padding: 50px;
+}
