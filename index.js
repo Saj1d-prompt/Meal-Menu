@@ -11,11 +11,13 @@ function process(data){
     console.log(meals);
     var oldContent = document.getElementById("display");
     oldContent.textContent = "";
+    document.getElementById("show").textContent = "";
     
     var counter = 0;
     for(var i=0;i<meals.length;i++){
         if(counter<5){
             var newDiv = document.createElement("div");
+            newDiv.classList.add("col-lg-4", "col-md-6", "col-sm-12", "mb-4");
             newDiv.innerHTML = `
                 <div class="card" style="width: 18rem;">
                     <img src="${meals[i].strMealThumb}" class="card-img-top">
@@ -52,6 +54,7 @@ function show(data){
     
     for(var i=5;i<meals.length;i++){
         var newDiv = document.createElement("div");
+        newDiv.classList.add("col-lg-4", "col-md-6", "col-sm-12", "mb-4");
         newDiv.innerHTML = `
             <div class="card" style="width: 18rem;">
                 <img src="${meals[i].strMealThumb}" class="card-img-top">
